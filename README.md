@@ -1,4 +1,4 @@
-<img width="1774" height="887" alt="logo" src="https://github.com/user-attachments/assets/bab9fdb3-17c8-4381-8e36-bea05e978aae" />
+<img height="600" alt="logo" src="https://github.com/user-attachments/assets/bab9fdb3-17c8-4381-8e36-bea05e978aae" />
 
 # 🏭 Wareflow
 
