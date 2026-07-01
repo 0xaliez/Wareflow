@@ -51,8 +51,8 @@ const MainLayout = () => {
     return (
         <div className="flex h-screen bg-gray-100 text-gray-900">
             {/* Sidebar */}
-            <aside className={`${isSidebarOpen ? 'w-64' : 'w-20'} transition-all duration-300 bg-slate-900 text-white flex flex-col`}>
-                <div className="p-4 flex items-center justify-between border-b border-slate-800">
+            <aside className={`${isSidebarOpen ? 'w-64' : 'w-20'} transition-all duration-300 bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-white flex flex-col`}>
+                <div className="p-4 flex items-center justify-between border-b border-indigo-800">
                     {isSidebarOpen && <span className="font-bold text-xl truncate"><img src="./logo.png" /></span>}
                     <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 hover:bg-slate-800 rounded-lg">
                         {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
@@ -64,9 +64,9 @@ const MainLayout = () => {
                         <Link 
                             key={item.path} 
                             to={item.path} 
-                            className="flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors group"
+                            className="flex items-center p-3 rounded-lg hover:bg-indigo-900 transition-colors group"
                         >
-                            <span className="text-gray-400 group-hover:text-white transition-colors">
+                            <span className="text-white group-hover:text-white transition-colors">
                                 {item.icon}
                             </span>
                             {isSidebarOpen && <span className="ml-3 font-medium">{item.name}</span>}
@@ -74,10 +74,10 @@ const MainLayout = () => {
                     ))}
                 </nav>
 
-                <div className="p-4 border-t border-slate-800">
+                <div className="p-4 border-t border-indigo-800">
                     <button 
                         onClick={handleLogout}
-                        className="flex items-center w-full p-3 rounded-lg hover:bg-red-600 transition-colors text-gray-400 hover:text-white"
+                        className="flex items-center w-full p-3 rounded-lg hover:bg-red-600 transition-colors text-indigo-300 hover:text-white"
                     >
                         <LogOut size={20} />
                         {isSidebarOpen && <span className="ml-3 font-medium">Logout</span>}
