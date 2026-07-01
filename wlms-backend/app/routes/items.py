@@ -9,8 +9,8 @@ bp = Blueprint('items', __name__, url_prefix='/api/items')
 @jwt_required()
 def get_all_items():
     rows = query(
-        "SELECT i.*, u.uom_name, u.uom_symbol "
-        "FROM items i JOIN unit_of_measure u ON u.uom_id = i.uom_id "
+        "SELECT i.*, u.uom_name, u.uom_symbol, s.available_quantity, s.reserved_quantity "
+        "FROM items i JOIN unit_of_measure u ON u.uom_id = i.uom_id JOIN stock_balance s ON s.item_id = i.item_id "
         "WHERE i.is_active = TRUE ORDER BY i.item_name",
         fetchall=True
     )

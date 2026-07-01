@@ -1,0 +1,6 @@
+flask
+flask-jwt-extended
+psycopg2-binary
+bcrypt
+flask_corspip uninstall flask-jwt-extended
+pip install flask-jwt-extended

@@ -44,6 +44,10 @@ $$;
 --  SP3 — Create a GRN header (Draft)
 -- ============================================================
 
+-- ============================================================
+--  SP3 — Create a GRN header (Draft)
+-- ============================================================
+
 CREATE OR REPLACE PROCEDURE sp_create_grn(
     p_po_id       INT,
     p_received_by INT

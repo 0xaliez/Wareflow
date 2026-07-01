@@ -13,12 +13,12 @@ def create_app():
 
     app.config['DB_HOST']   = 'localhost'
     app.config['DB_PORT']   = 5432
-    app.config['DB_NAME']   = 'project_db'
+    app.config['DB_NAME']   = 'wlms'
     app.config['DB_USER']   = 'postgres'
-    app.config['DB_PASSWORD']   = 'abc123'
+    app.config['DB_PASSWORD']   = 'temp'
 
     jwt.init_app(app)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"], "allow_headers": ["*"]}})
 
     app.teardown_appcontext(close_db)
 
