@@ -11,6 +11,7 @@ def get_db():
             dbname=current_app.config['DB_NAME'],
             user=current_app.config['DB_USER'],
             password=current_app.config['DB_PASSWORD'],
+            sslmode=current_app.config.get('DB_SSLMODE', 'disable'),
             cursor_factory=psycopg2.extras.RealDictCursor
         )
     return g.db
