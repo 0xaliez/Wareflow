@@ -4,6 +4,10 @@
 
 A full-stack **Warehouse & Logistics Management System** that handles the complete lifecycle of warehouse operations — from procurement and inventory tracking to sales order fulfillment and delivery dispatching.
 
+🔗 **Live Demo:** [wareflow-theta.vercel.app](https://wareflow-theta.vercel.app/)
+
+> A demo account is available on the login page to explore the system.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -14,6 +18,7 @@ A full-stack **Warehouse & Logistics Management System** that handles the comple
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
 
@@ -24,3 +29,15 @@ A full-stack **Warehouse & Logistics Management System** that handles the comple
 - 📊 **Inventory Management** — real-time stock tracking with reorder level alerts and reserved quantity separation
 - 🔐 **Role-Based Access Control** — three roles (Administrator, Warehouse Staff, Logistics Staff) with scoped permissions across all workflows
 - 🔑 **JWT Authentication** — secure token-based auth across all API endpoints
+
+---
+
+## 🚀 Deployment
+
+| Layer | Platform |
+|---|---|
+| Frontend (React + Vite) | Vercel |
+| Backend (Flask, Dockerized) | Render |
+| Database (PostgreSQL) | Supabase |
+
+The Flask backend is containerized with Docker and deployed as a web service on Render. The PostgreSQL database is hosted on Supabase with SSL enforced. The React frontend is deployed on Vercel and communicates with the backend via environment-configured API URLs.
