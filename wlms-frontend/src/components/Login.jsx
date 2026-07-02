@@ -69,6 +69,15 @@ const Login = () => {
                         </div>
                     )}
 
+                    <div
+                        className="mb-6 p-3 bg-indigo-50 border border-indigo-100 rounded-md text-sm text-indigo-700 cursor-pointer hover:bg-indigo-100 transition-colors"
+                        onClick={() => { setUsername('admin'); setPassword('pass'); }}
+                    >
+                        <span className="font-semibold">Demo Account</span> — click to autofill
+                        <span className="ml-2 text-indigo-400">admin / pass</span>
+                    </div>
+
+
                     <form onSubmit={handleLogin} className="space-y-5">
                         <div>
                             <div className="relative">
